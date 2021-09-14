@@ -1,8 +1,16 @@
 .bottom {
   text-align: center;
+
+  @include respond("laptop") {
+    position: fixed;
+    bottom: 1.8rem;
+    left: 2rem;
+  }
+
   &__left {
     display: flex;
     flex-direction: column;
+    width: 50%;
 
     & > * {
       color: inherit;
@@ -11,7 +19,7 @@
     }
     &--info {
       @include respond("tablet") {
-        width: 30%;
+        width: 60%;
         text-align: left;
       }
     }
@@ -47,6 +55,10 @@
         position: absolute;
         bottom: 0;
         right: 0;
+      }
+
+      @include respond("laptop") {
+        display: none;
       }
     }
   }
