@@ -124,7 +124,7 @@ body {
 
 .issue__link {
   font-size: 1.5rem;
-  margin-block: 2rem;
+  margin-top: 2rem;
   font-weight: 900;
   color: #fff;
   text-decoration: none;
@@ -133,6 +133,9 @@ body {
 .issue__stores {
   font-size: 1.5rem;
   font-weight: 900;
+  margin-top: 2rem;
+  padding-inline: 1.5rem;
+  text-align: center;
 }
 
 .issue__stores--link {

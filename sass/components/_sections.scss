@@ -31,7 +31,7 @@
   }
   &__link {
     font-size: 1.5rem;
-    margin-block: 2rem;
+    margin-top: 2rem;
     font-weight: 900;
     color: #fff;
     text-decoration: none;
@@ -39,6 +39,10 @@
   &__stores {
     font-size: 1.5rem;
     font-weight: 900;
+    margin-top: 2rem;
+    padding-inline: 1.5rem;
+    text-align: center;
+
     &--link {
       color: #fff;
       text-decoration: none;
