@@ -1,6 +1,5 @@
 .bottom {
   text-align: center;
-  padding-inline: 1.5rem;
   &__left {
     display: flex;
     flex-direction: column;
@@ -11,12 +10,20 @@
       font-size: 1.8rem;
     }
     &--info {
+      @include respond("tablet") {
+        width: 30%;
+        text-align: left;
+      }
     }
 
     &--copyright {
       font-size: 1.2rem;
-      padding-block: 1rem;
+      padding-block: 0.5rem;
       font-weight: 400;
+
+      @include respond("tablet") {
+        text-align: left;
+      }
     }
 
     &--publisher {
@@ -25,11 +32,22 @@
 
     &--policy {
       margin-top: 2rem;
+      @include respond("tablet") {
+        text-align: left;
+      }
     }
 
     &--email {
       text-decoration: none;
       margin-block: 5rem;
+
+      @include respond("tablet") {
+        margin-block: 0;
+        padding: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     }
   }
 
