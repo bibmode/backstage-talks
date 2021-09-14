@@ -1,0 +1,48 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  border-top: 1rem solid red;
+
+  // &:not(:nth-child(0)) {
+  //   height: 100vh;
+  // }
+
+  scroll-snap-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__issue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--1 {
+    }
+  }
+}
+
+.issue {
+  &__book {
+    width: 80%;
+  }
+  &__number {
+    font-size: 1.8rem;
+  }
+  &__link {
+    font-size: 1.5rem;
+    margin-block: 2rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+  }
+  &__stores {
+    font-size: 1.5rem;
+    font-weight: 900;
+    &--link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

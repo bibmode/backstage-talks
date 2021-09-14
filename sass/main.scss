@@ -1,8 +1,9 @@
-@import 'mixins';
-@import 'utilities';
+@import "mixins";
+@import "utilities";
 
-@import 'base';
-@import 'layout';
+@import "base";
+@import "layout";
 
-@import 'components/fixed-typography';
-@import 'components/sections';
+@import "components/nav";
+@import "components/bottom";
+@import "components/sections";

@@ -1,1 +1,107 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  position: relative;
+  background-color: #00c1b5;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow-x: hidden;
+}
+
+.nav {
+  padding: 2rem 1.5rem;
+  position: absolute;
+}
+
+.nav__logo {
+  width: 16rem;
+  height: auto;
+}
+
+.nav__link {
+  display: none;
+}
+
+.bottom {
+  display: none;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  border-top: 1rem solid red;
+  scroll-snap-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__issue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.issue__book {
+  width: 80%;
+}
+
+.issue__number {
+  font-size: 1.8rem;
+}
+
+.issue__link {
+  font-size: 1.5rem;
+  margin-block: 2rem;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+}
+
+.issue__stores {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.issue__stores--link {
+  color: #fff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

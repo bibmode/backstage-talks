@@ -1,0 +1,21 @@
+.bottom {
+  display: none;
+  &__left {
+    &--info {
+    }
+
+    &--copyright {
+    }
+
+    &--policy {
+    }
+  }
+
+  &__right {
+    &--issues {
+    }
+
+    &--issue {
+    }
+  }
+}

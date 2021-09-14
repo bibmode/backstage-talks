@@ -1,0 +1,13 @@
+.nav {
+  padding: 2rem 1.5rem;
+  position: absolute;
+
+  &__logo {
+    width: 16rem;
+    height: auto;
+  }
+
+  &__link {
+    display: none;
+  }
+}
