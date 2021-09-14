@@ -4,6 +4,10 @@
   justify-content: space-between;
   width: calc(100% - 3rem);
 
+  @include respond("laptop") {
+    position: fixed;
+  }
+
   &__logo {
     width: 16rem;
     height: auto;
@@ -22,7 +26,6 @@
       font-weight: 700;
       color: inherit;
       text-decoration: none;
-      //cursor: pointer;
     }
   }
 }

@@ -11,7 +11,11 @@
   &__left {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+
+    @include respond("laptop") {
+      width: 50%;
+    }
 
     & > * {
       color: inherit;
@@ -20,8 +24,12 @@
     }
     &--info {
       @include respond("tablet") {
-        width: 60%;
+        width: 30%;
         text-align: left;
+      }
+
+      @include respond("laptop") {
+        width: 60%;
       }
     }
 

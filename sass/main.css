@@ -38,6 +38,12 @@ body {
   width: calc(100% - 3rem);
 }
 
+@media (min-width: 62em) {
+  .nav {
+    position: fixed;
+  }
+}
+
 .nav__logo {
   width: 16rem;
   height: auto;
@@ -84,7 +90,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 62em) {
+  .bottom__left {
+    width: 50%;
+  }
 }
 
 .bottom__left > * {
@@ -95,8 +107,14 @@ body {
 
 @media (min-width: 48em) {
   .bottom__left--info {
-    width: 60%;
+    width: 30%;
     text-align: left;
+  }
+}
+
+@media (min-width: 62em) {
+  .bottom__left--info {
+    width: 60%;
   }
 }
 
