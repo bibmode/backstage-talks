@@ -25,7 +25,7 @@
 
 .issue {
   &__book {
-    width: 80%;
+    width: calc(min(80%, 42rem));
   }
   &__number {
     font-size: 1.8rem;

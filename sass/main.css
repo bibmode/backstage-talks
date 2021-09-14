@@ -7,12 +7,6 @@
   margin: 0;
 }
 
-html,
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -44,6 +38,46 @@ body {
 }
 
 .bottom {
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+
+.bottom__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottom__left > * {
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.bottom__left--copyright {
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  font-weight: 400;
+}
+
+.bottom__left--publisher {
+  color: inherit;
+}
+
+.bottom__left--policy {
+  margin-top: 2rem;
+}
+
+.bottom__left--email {
+  text-decoration: none;
+  margin-block: 5rem;
+}
+
+.bottom__right {
   display: none;
 }
 
@@ -80,7 +114,7 @@ body {
 }
 
 .issue__book {
-  width: 80%;
+  width: calc(min(80%, 42rem));
 }
 
 .issue__number {

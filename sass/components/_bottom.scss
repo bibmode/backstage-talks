@@ -1,17 +1,40 @@
 .bottom {
-  display: none;
+  text-align: center;
+  padding-inline: 1.5rem;
   &__left {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      color: inherit;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
     &--info {
     }
 
     &--copyright {
+      font-size: 1.2rem;
+      padding-block: 1rem;
+      font-weight: 400;
+    }
+
+    &--publisher {
+      color: inherit;
     }
 
     &--policy {
+      margin-top: 2rem;
+    }
+
+    &--email {
+      text-decoration: none;
+      margin-block: 5rem;
     }
   }
 
   &__right {
+    display: none;
     &--issues {
     }
 
