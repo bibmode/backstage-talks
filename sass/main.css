@@ -20,6 +20,8 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   overflow-x: hidden;
 }
 
@@ -84,7 +86,6 @@ body {
 .section {
   width: 100vw;
   height: 100vh;
-  border-top: 1rem solid red;
   scroll-snap-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
