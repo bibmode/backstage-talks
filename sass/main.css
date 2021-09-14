@@ -7,6 +7,20 @@
   margin: 0;
 }
 
+@media (min-width: 62em) {
+  html,
+  body {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-scroll-snap-type: mandatory;
+        scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    -webkit-transition: all 700ms ease;
+    transition: all 700ms ease;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -20,11 +34,16 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
   overflow-x: hidden;
   padding: 2rem 1.5rem;
   padding-bottom: 1.8rem;
+}
+
+.container {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .nav {
@@ -188,6 +207,10 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.6;
+}
+
+#issue--5 {
+  font-weight: 700;
 }
 
 .section {
