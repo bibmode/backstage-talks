@@ -40,38 +40,31 @@ links.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     scrollOnLink(link.dataset.num);
+    console.log(link.dataset.num);
   });
 });
 
-const getHeightOfSections = function () {
-  links.forEach((link) => {
-    console.log(link);
+// const getHeightOfSections = function () {
+//   links.forEach((link) => {
+//     //console.log(link);
 
-    const targetSection = document.querySelector(`#book-${link.dataset.num}`);
-    console.log(targetSection);
+//     const targetSection = document.querySelector(`#book-${link.dataset.num}`);
+//     console.log(targetSection);
 
-    const sectionPosition = targetSection.getBoundingClientRect();
-    console.log(sectionPosition);
+//     const sectionPosition = targetSection.getBoundingClientRect();
+//     console.log(sectionPosition);
 
-    sectionsArr.push(sectionPosition.top);
-    console.log(sectionsArr);
-    // link.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   scrollOnLink(link);
-    // });
-  });
-};
+//     sectionsArr.push(sectionPosition.top);
+//   });
+//   console.log(sectionsArr);
+// };
 
-getHeightOfSections();
-
-sectionsArr.reverse();
-console.log(sectionsArr);
+// getHeightOfSections();
 
 const scrollOnLink = (targetIndex) => {
-  const scrollHeight = sectionsArr[targetIndex - 1];
-  container.style.transform = `translate3D(0 , calc(${scrollHeight}px), 0)`;
-  sectionsArr = [];
-  getHeightOfSections();
+  container.style.transform = `translate3D(0 , calc(100vh * -${
+    targetIndex - 1
+  }), 0)`;
 };
 
 // const scrollOnLink = (choice) => {
