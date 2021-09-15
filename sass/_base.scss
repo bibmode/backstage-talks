@@ -8,13 +8,20 @@
 
 html,
 body {
-  @include respond("laptop") {
-    box-sizing: border-box;
-    scroll-snap-type: mandatory;
-    //scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-    //scroll-behavior: smooth;
-    transition: all 700ms ease;
+  // @include respond("laptop") {
+  //   box-sizing: border-box;
+  //   scroll-snap-type: mandatory;
+  //   //scroll-snap-points-y: repeat(100vh);
+  //   scroll-snap-type: y mandatory;
+  //   //scroll-behavior: smooth;
+  //   transition: all 700ms ease;
+  // }
+
+  //overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
 }
 

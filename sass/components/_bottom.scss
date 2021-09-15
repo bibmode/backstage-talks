@@ -6,6 +6,7 @@
     position: fixed;
     bottom: 1.8rem;
     left: 2rem;
+    touch-action: none;
   }
 
   &__left {
