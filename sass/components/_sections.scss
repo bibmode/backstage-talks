@@ -31,8 +31,9 @@
 
   &__book {
     width: calc(min(80%, 42rem));
+    padding-top: 25vh;
     @include respond("laptop") {
-      padding-top: 9rem;
+      padding-top: calc(max(9rem, 10vw));
     }
   }
 
