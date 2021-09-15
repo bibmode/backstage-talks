@@ -17,12 +17,8 @@ new fullpage("#fullpage", {
     let leavingSection = this;
 
     $("body").css("background-color", colors[destination.index]);
-
-    // if (origin.index == 1 && direction == "down") {
-    //   alert("Going to section 3!");
-    // } else if (origin.index == 1 && direction == "up") {
-    //   alert("Going to section 1!");
-    // }
+    $(".issue-link").css("font-weight", "400");
+    $(`#issue--${destination.index + 1}`).css("font-weight", "700");
   },
 });
 
