@@ -59,3 +59,14 @@
     }
   }
 }
+
+.bottom__right {
+  a:active,
+  a:focus {
+    font-weight: 700;
+  }
+
+  a:focus ~ a {
+    font-weight: 300;
+  }
+}

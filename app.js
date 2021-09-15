@@ -3,58 +3,33 @@
 const links = document.querySelectorAll(".issue-link");
 const container = document.querySelector(".container");
 
-let position = $(window).scrollTop();
-
-$(window).scroll(function () {
-  let scroll = $(window).scrollTop();
-  if (scroll > position) {
-    console.log("scrollDown");
-  } else {
-    console.log("scrollUp");
-  }
-  position = scroll;
-  console.log(position);
-});
-
 new fullpage("#fullpage", {
   //options here
-  //autoScrolling: true,
+  anchors: ["section1", "section2", "section3", "section4", "section5"],
+  menu: "#myMenu",
+  autoScrolling: true,
   scrollHorizontally: true,
+  dropEffect: true,
+
+  afterSlideLoad: function (section, origin, destination, direction) {
+    var loadedSlide = this;
+
+    //first slide of the second section
+    if (section.anchor == "section2" && destination.index == 1) {
+      console.log("First slide loaded");
+    }
+
+    //second slide of the second section (supposing #secondSlide is the
+    // //anchor for the second slide)
+    // if (section.index == 1 && destination.anchor == "secondSlide") {
+    //   console.log("Second slide loaded");
+    // }
+  },
 });
 
-/////////////////////////////////////////////
-// scroll snap
-
-// getHeightOfSections();
-// let initialScroll = 0,
-//   newScroll;
-
-// document.addEventListener("scroll", function (e) {
-//   const nextScroll = document.documentElement.scrollTop;
-//   console.log(nextScroll, initialScroll);
-
-//   if (nextScroll > initialScroll) {
-//     container.style.transform = `translate3d(0, -100vh ,0)`;
-//   }
-
-//   if (nextScroll < initialScroll) {
-//     container.style.transform = `translate3d(0, 100vh ,0)`;
-//   }
-
-//   initialScroll = nextScroll;
-// });
-// let sectionNow = 0;
-// window.onscroll = function (e) {
-//   const scrollDirection = this.oldScroll > this.scrollY;
-//   console.log(scrollDirection);
-//   this.oldScroll = this.scrollY;
-//   // if(scrollDirection) s
-// };
-
-// document.addEventListener("scroll", function () {
-//   console.log("hello");
-//   scrollDirection = false;
-// });
+document.addEventListener("change", function () {
+  console.log("change");
+});
 
 /////////////////////////////////////////////
 //color changing in the background on scroll
@@ -85,54 +60,4 @@ document.addEventListener("scroll", () => {
 const changeColor = (color) => {
   pastSection = currentSection;
   $("body").css("background-color", `#${color}`);
-};
-
-/////////////////////////////////////////////
-// snap scrolling
-
-const snapScroll = (currentDiv) => {
-  const sectionNow = document.getElementById(`${currentDiv}`);
-  //console.log(sectionNow.parentElement);
-};
-
-/////////////////////////////////////////////
-// scroll on click link
-
-let currentBook = 1;
-
-links.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollOnLink(link.dataset.num);
-    //console.log(link.dataset.num);
-  });
-});
-
-const getHeightOfSections = function () {
-  let sectionsArr = [];
-  links.forEach((link) => {
-    //console.log(link);
-
-    const targetSection = document.querySelector(`#book-${link.dataset.num}`);
-    //console.log(targetSection);
-
-    const sectionPosition = targetSection.getBoundingClientRect();
-    //console.log(sectionPosition);
-
-    sectionsArr.push(sectionPosition.top);
-  });
-  return sectionsArr;
-};
-
-// let direction;
-// window.onscroll = function (e) {
-//   const scrollDirection = this.oldScroll > this.scrollY;
-//   console.log(scrollDirection);
-//   this.oldScroll = this.scrollY;
-// };
-
-const scrollOnLink = (targetIndex) => {
-  container.style.transform = `translateY(calc(100vh * -${
-    Number(targetIndex) - 1
-  }))`;
 };

@@ -220,10 +220,6 @@ body {
   line-height: 1.6;
 }
 
-#issue--5 {
-  font-weight: 700;
-}
-
 .section {
   width: 100%;
   height: 100vh;
@@ -293,5 +289,14 @@ body {
 .issue__stores--link {
   color: #fff;
   text-decoration: none;
+}
+
+.bottom__right a:active,
+.bottom__right a:focus {
+  font-weight: 700;
+}
+
+.bottom__right a:focus ~ a {
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */
