@@ -12,6 +12,7 @@ new fullpage("#fullpage", {
   autoScrolling: true,
   scrollHorizontally: true,
   dropEffect: true,
+  responsiveWidth: 991,
 
   onLeave: function (origin, destination, direction) {
     let leavingSection = this;
@@ -21,20 +22,3 @@ new fullpage("#fullpage", {
     $(`#issue--${destination.index + 1}`).css("font-weight", "700");
   },
 });
-
-document.addEventListener("change", function () {
-  console.log("change");
-});
-
-// remove plugin on tablet breakpoint
-
-const mql = window.matchMedia("(max-width: 62em)");
-
-mql.onchange = (e) => {
-  if (e.matches) {
-    console.log("we are now at breakpoint territory");
-    fullpage_api.destroy();
-  } else {
-    fullpage_api.reBuild();
-  }
-};
