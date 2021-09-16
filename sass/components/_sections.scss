@@ -31,19 +31,6 @@
 
   &__book {
     width: calc(min(80%, 42rem));
-    padding-top: 20vh;
-
-    @include respond("phone-big") {
-      padding-top: 10vh;
-    }
-
-    // @include respond("tablet") {
-    //   padding-top: 8vw;
-    // }
-
-    @include respond("laptop") {
-      padding-top: 6.2vw;
-    }
   }
 
   &__number {
@@ -74,4 +61,8 @@
   a:hover {
     text-decoration: underline;
   }
+}
+
+.fp-tableCell {
+  display: flex;
 }

@@ -271,19 +271,6 @@ body {
 
 .issue__book {
   width: calc(min(80%, 42rem));
-  padding-top: 20vh;
-}
-
-@media (min-width: 28em) {
-  .issue__book {
-    padding-top: 10vh;
-  }
-}
-
-@media (min-width: 62em) {
-  .issue__book {
-    padding-top: 6.2vw;
-  }
 }
 
 .issue__number {
@@ -313,5 +300,11 @@ body {
 
 .bottom__right a:hover {
   text-decoration: underline;
+}
+
+.fp-tableCell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
