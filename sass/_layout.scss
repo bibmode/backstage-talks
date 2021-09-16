@@ -1,26 +1,15 @@
-@mixin respond($breakpoint) {
-  @if $breakpoint == "phone-big" {
-    @media (min-width: 28em) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == "tablet" {
-    @media (min-width: 48em) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == "laptop" {
-    @media (min-width: 62em) {
-      @content;
-    }
-  }
-}
-
 .container {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+
+  margin: 0 auto;
+  z-index: 5000;
+
+  @include respond("tablet") {
+    width: calc(min(50%, fit-content));
+  }
+
   @include respond("laptop") {
     touch-action: none;
 

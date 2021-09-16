@@ -6,6 +6,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 5000;
+}
+
+@media (min-width: 48em) {
+  .container {
+    width: calc(min(50%, -webkit-fit-content));
+    width: calc(min(50%, -moz-fit-content));
+    width: calc(min(50%, fit-content));
+  }
 }
 
 @media (min-width: 62em) {
@@ -73,6 +86,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: calc(100% - 3rem);
+  z-index: 2000;
 }
 
 @media (min-width: 62em) {
@@ -104,6 +118,10 @@ body {
     color: inherit;
     text-decoration: none;
   }
+}
+
+.nav__link:hover {
+  text-decoration: underline;
 }
 
 .bottom {
@@ -153,7 +171,7 @@ body {
 
 @media (min-width: 62em) {
   .bottom__left--info {
-    width: 60%;
+    width: calc(min(60%, 30rem));
   }
 }
 
@@ -173,6 +191,10 @@ body {
   color: inherit;
 }
 
+.bottom__left--publisher:hover {
+  text-decoration: none;
+}
+
 .bottom__left--policy {
   margin-top: 2rem;
 }
@@ -181,6 +203,10 @@ body {
   .bottom__left--policy {
     text-align: left;
   }
+}
+
+.bottom__left--policy:hover {
+  text-decoration: none;
 }
 
 .bottom__left--email {
@@ -262,7 +288,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1000;
 }
 
 .issue > * {
@@ -283,6 +308,13 @@ body {
   font-weight: 900;
   color: #fff;
   text-decoration: none;
+  z-index: 3000;
+}
+
+.issue__link:hover, .issue__link:active {
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0.5) 2px;
+          text-decoration: underline rgba(255, 255, 255, 0.5) 2px;
+  cursor: pointer;
 }
 
 .issue__stores {
@@ -291,11 +323,18 @@ body {
   margin-top: 1.5rem;
   padding-inline: 1.5rem;
   text-align: center;
+  z-index: 3000;
 }
 
 .issue__stores--link {
   color: #fff;
   text-decoration: none;
+}
+
+.issue__stores--link:hover, .issue__stores--link:active {
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0.5) 2px;
+          text-decoration: underline rgba(255, 255, 255, 0.5) 2px;
+  cursor: pointer;
 }
 
 .bottom__right a:hover {

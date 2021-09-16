@@ -30,7 +30,7 @@
       }
 
       @include respond("laptop") {
-        width: 60%;
+        width: calc(min(60%, 30rem));
       }
     }
 
@@ -46,12 +46,20 @@
 
     &--publisher {
       color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &--policy {
       margin-top: 2rem;
       @include respond("tablet") {
         text-align: left;
+      }
+
+      &:hover {
+        text-decoration: none;
       }
     }
 
