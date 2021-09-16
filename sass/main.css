@@ -46,6 +46,7 @@ body {
   line-height: 1.4;
   position: relative;
   background-color: #00c1b5;
+  color: #251d20;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
   height: -webkit-max-content;
@@ -270,12 +271,24 @@ body {
 
 .issue__book {
   width: calc(min(80%, 42rem));
-  padding-top: 25vh;
+  padding-top: 20vh;
+}
+
+@media (min-width: 28em) {
+  .issue__book {
+    padding-top: 10vh;
+  }
+}
+
+@media (min-width: 48em) {
+  .issue__book {
+    padding-top: 8vw;
+  }
 }
 
 @media (min-width: 62em) {
   .issue__book {
-    padding-top: calc(max(9rem, 10vw));
+    padding-top: 6.2vw;
   }
 }
 
@@ -304,12 +317,7 @@ body {
   text-decoration: none;
 }
 
-.bottom__right a:active,
-.bottom__right a:focus {
-  font-weight: 700;
-}
-
-.bottom__right a:focus ~ a {
-  font-weight: 300;
+.bottom__right a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */

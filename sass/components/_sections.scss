@@ -31,9 +31,18 @@
 
   &__book {
     width: calc(min(80%, 42rem));
-    padding-top: 25vh;
+    padding-top: 20vh;
+
+    @include respond("phone-big") {
+      padding-top: 10vh;
+    }
+
+    @include respond("tablet") {
+      padding-top: 8vw;
+    }
+
     @include respond("laptop") {
-      padding-top: calc(max(9rem, 10vw));
+      padding-top: 6.2vw;
     }
   }
 
@@ -62,12 +71,7 @@
 }
 
 .bottom__right {
-  a:active,
-  a:focus {
-    font-weight: 700;
-  }
-
-  a:focus ~ a {
-    font-weight: 300;
+  a:hover {
+    text-decoration: underline;
   }
 }
