@@ -25,3 +25,16 @@ new fullpage("#fullpage", {
 document.addEventListener("change", function () {
   console.log("change");
 });
+
+// remove plugin on tablet breakpoint
+
+const mql = window.matchMedia("(max-width: 62em)");
+
+mql.onchange = (e) => {
+  if (e.matches) {
+    console.log("we are now at breakpoint territory");
+    fullpage_api.destroy();
+  } else {
+    fullpage_api.reBuild();
+  }
+};

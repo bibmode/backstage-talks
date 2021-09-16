@@ -280,12 +280,6 @@ body {
   }
 }
 
-@media (min-width: 48em) {
-  .issue__book {
-    padding-top: 8vw;
-  }
-}
-
 @media (min-width: 62em) {
   .issue__book {
     padding-top: 6.2vw;

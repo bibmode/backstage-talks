@@ -37,9 +37,9 @@
       padding-top: 10vh;
     }
 
-    @include respond("tablet") {
-      padding-top: 8vw;
-    }
+    // @include respond("tablet") {
+    //   padding-top: 8vw;
+    // }
 
     @include respond("laptop") {
       padding-top: 6.2vw;
